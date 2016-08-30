@@ -34,11 +34,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         self.mapView?.showsUserLocation = true
     }
     
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if annotation.isKindOfClass(MKUserLocation) {
+            return nil
+        }
+        var annotationView = self.mapView?.dequeueReusableAnnotationViewWithIdentifier("PizzaAnnotationView")
+        
+        if(annotationView == nil){
+            
+            annotationView = PizzaAnnotationView(annotation: annotation, reuseIdentifier: "PizzaAnnotationView")
+            annotationView?.canShowCallout = true
+        } else {
+            annotationView?.annotation = annotation
+        }
+        return annotationView
+    }
+
     func addAnnotationToMap() {
         let pizzaAnnotation = PizzaAnnotation(coordinate: self.currentLocation!.coordinate, title: "Yummy Pizza", subtitle: "Way to cool for school")
         self.mapView?.addAnnotation(pizzaAnnotation)
     }
-
+    
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         
         self.currentLocation = userLocation.location
@@ -46,7 +63,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 250, 250)
         self.mapView?.setRegion(region, animated: true)
     }
-
+    
     override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
         
         if(motion == UIEventSubtype.MotionShake) {

@@ -13,6 +13,7 @@
 		64AD05091D751C4E003DA3EC /* Pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD05081D751C4E003DA3EC /* Pizza.png */; };
 		64AD050C1D751C4E003DA3EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64AD050A1D751C4E003DA3EC /* LaunchScreen.storyboard */; };
 		64AD05141D75251F003DA3EC /* PizzaAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD05131D75251F003DA3EC /* PizzaAnnotation.swift */; };
+		64C5052D1D75EE6400AAFF49 /* PizzaAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C5052C1D75EE6400AAFF49 /* PizzaAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		64AD050B1D751C4E003DA3EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64AD050D1D751C4E003DA3EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64AD05131D75251F003DA3EC /* PizzaAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaAnnotation.swift; sourceTree = "<group>"; };
+		64C5052C1D75EE6400AAFF49 /* PizzaAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				64AD05011D751C4E003DA3EC /* AppDelegate.swift */,
 				64AD05031D751C4E003DA3EC /* ViewController.swift */,
+				64C5052C1D75EE6400AAFF49 /* PizzaAnnotationView.swift */,
 				64AD05051D751C4E003DA3EC /* Main.storyboard */,
 				64AD05081D751C4E003DA3EC /* Pizza.png */,
 				64AD050A1D751C4E003DA3EC /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64C5052D1D75EE6400AAFF49 /* PizzaAnnotationView.swift in Sources */,
 				64AD05141D75251F003DA3EC /* PizzaAnnotation.swift in Sources */,
 				64AD05041D751C4E003DA3EC /* ViewController.swift in Sources */,
 				64AD05021D751C4E003DA3EC /* AppDelegate.swift in Sources */,
